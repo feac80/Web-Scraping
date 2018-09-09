@@ -1,0 +1,11 @@
+<% include ./partials/header %>
+<h2>Add a new Web</h2>
+<form action="/webs" method="POST">
+<label for="web[name]" >Title/Name:</label>   
+<input type="text" placeholder="Type the Title/Name..." name="web[name]">
+<label for="web[category]" >Category:</label>  
+<input type="text" placeholder="Type Category..." name="web[category]">
+<label for="web[url]" >Url:</label>  
+<input type="text" placeholder="url" name="web[url]">
+<input type="submit">
+</form>

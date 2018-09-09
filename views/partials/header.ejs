@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Web Scraping</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
+        <style>
+            #img{
+                height: 95%;
+                width: 95%;
+            }
+            .row{
+                display:flex ;
+                flex-wrap:wrap;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+      <a href="#intro" class="navbar-brand">Web Scraping Tool</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!--a class="nav-item nav-link " href="#intro" >Home</a>-->
+      		 <% if (!currentUser){ %>
+		        <li><a href="/login">Login </a></li>  
+		        <li><a href="/register"> Signup</a></li>
+		     <% } else {%>
+	             <li><a>Logged in as <%=currentUser.username%></a></li>
+		         <li><a href="/logout">Log out</a></li>
+            <% } %>
+        </ul>
+      </div>
+    </nav>
+
+        <nav class="navbar navbar-default">
+	    <div class="container-fluid">
+	        <div class="navbar-header"> 
+	            <a class="navbar-brand" href="#">Scraping Webs</a>
+	        </div>
+	        <div class="collapse navbar-collapse ">
+	            
+	            	<ul class="nav navbar-nav navbar-right">
+		                
+
+	           	 	</ul>
+	        </div>
+	     </div>
+	  </nav>
+	<div class="container">
+        <% if(success && success.length >0) {%>
+             <div class="alert alert-success" role="alert">
+             <%= success %>
+             </div>
+        <% } %>
+        <% if(error && error.length > 0 ) {%>
+        <div class="alert alert-danger" role="alert">
+        <%= error %>
+    </div>  
+    <% } %>
+    <div class="container">
+
+        
+        
+ 

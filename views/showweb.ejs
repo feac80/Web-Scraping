@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+<div class="container">
+    <ul>
+        
+        <li>The web <%= web.name %></li>
+     
+     
+        <li>The Category <%= web.category %></li>
+     
+   
+        <li>The URL <%= web.url %></li>
+    </ul>
+    <a href="/webs/<%=web._id%>/edit">Edit</a>
+    <br>
+    <form id="delete" action="/webs/<%=web._id%>?_method=DELETE" method="POST">
+      <button class="btn ">Delete</button>  
+    </form>
+    
+    <br>
+    <a href="/webs">Back to the list of webs</a>    
+</div>

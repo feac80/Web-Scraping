@@ -1,0 +1,15 @@
+<% include ./partials/header %>
+<h2> The list of web sites availabe for web scraping</h2>
+
+<ul>
+<% webs.forEach(function(web){ %>
+<li><%=   web.name   %> </li>
+<li><%=   web.category   %> </li>
+<li><%=   web.url   %> </li>
+<a href="/webs/<%=web.id %>">More details...</a>
+<br>
+<% }); %>
+
+<a href="/webs/new" >Add a new web</a>
+
+</ul>
