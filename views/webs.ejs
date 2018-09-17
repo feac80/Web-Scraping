@@ -1,15 +1,22 @@
 <% include ./partials/header %>
-<h2> The list of web sites availabe for web scraping</h2>
+<h2> The list of web sites availabe for web scraping2</h2>
+<div class="container" >
+    <div class=row >
+              <% webs.forEach(function(web){ %>   
+              <div class="col-sm-6 col-md-4">
+                   <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                        <div class="caption">
+                        <h5 class="card-title"><%= web.name %></h5>
+                            <p class="card-text"><%=   web.category   %> url  <p><%=   web.url   %> </p></p>
+                            <a href="/webs/<%=web.id %>" class="btn btn-primary">More details</a>
+                        </div>
+                    </div>
+                   </div>
+               </div >        
+                            <% }); %>   
+                        <a href="/webs/new" >Add a new web</a>    
 
-<ul>
-<% webs.forEach(function(web){ %>
-<li><%=   web.name   %> </li>
-<li><%=   web.category   %> </li>
-<li><%=   web.url   %> </li>
-<a href="/webs/<%=web.id %>">More details...</a>
-<br>
-<% }); %>
-
-<a href="/webs/new" >Add a new web</a>
-
-</ul>
+  </div>
+</div>
